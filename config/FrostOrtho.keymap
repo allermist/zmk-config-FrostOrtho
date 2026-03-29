@@ -134,7 +134,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans        &trans        &trans        &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
 
         layer_5 {
@@ -145,7 +145,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
 
         MOUSE {
@@ -156,7 +156,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
 
         layer_7 {
@@ -167,7 +167,7 @@
 &trans     &trans       &trans       &trans       &trans  &trans      &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
     };
 };
