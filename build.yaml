@@ -22,7 +22,7 @@ include:
   # shield: FrostOrtho_R rgbled_adapter # zmk-rgbled-widgetを使用する場合はこっちを使う
     shield: FrostOrtho_R
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_POINTING=y
 
   - board: seeeduino_xiao_ble
   # shield: FrostOrtho_L rgbled_adapter # zmk-rgbled-widgetを使用する場合はこっちを使う
@@ -46,5 +46,5 @@ include:
   # ドングル用の右手側 (Peripheral / トラックボール側)
   - board: seeeduino_xiao_ble
     shield: FrostOrtho_R
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_POINTING=y
     artifact-name: FrostOrtho_R_for_dongle
