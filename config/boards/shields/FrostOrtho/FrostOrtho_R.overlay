@@ -63,7 +63,7 @@
         input-processors = <
             &mouse_runtime_input_processor
             &zip_temp_layer 6 100000 // AMLレイヤー、タイムアウト時間
-            &zip_xy_scaler 3 6 // カーソル移動量3/6倍
+            &zip_xy_scaler 4 6 // カーソル移動量4/6倍
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP) // カーソルの移動方向調整
         >;
     };
