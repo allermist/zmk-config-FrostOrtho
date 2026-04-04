@@ -5,15 +5,17 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
     #  - name: inorichi
-    #   url-base: https://github.com/inorichi
+    #    url-base: https://github.com/inorichi
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: cormoran
       url-base: https://github.com/cormoran
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: prospector
-      url-base: https://github.com/t-ogura
+    #  - name: prospector
+    #    url-base: https://github.com/t-ogura
+    - name: carrefinho                            # <--- add this
+      url-base: https://github.com/carrefinho
 
   projects:
     #　- name: zmk
@@ -48,9 +50,13 @@ manifest:
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
       revision: main
-    - name: prospector-zmk-module
-      remote: prospector
-      revision: v2.0.0  # Use v2.0.0 for ZMK ≤0.3 (Zephyr 3.x)
-      path: modules/prospector-zmk-module 
+    #  - name: prospector-zmk-module
+    #    remote: prospector
+    #    revision: v2.0.0  # Use v2.0.0 for ZMK ≤0.3 (Zephyr 3.x)
+    #    path: modules/prospector-zmk-module
+    - name: prospector-zmk-module                 
+      remote: carrefinho                  
+      revision: main
+
   self:
     path: config

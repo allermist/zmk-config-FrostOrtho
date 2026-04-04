@@ -6,8 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT
     default y
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
 
 endif
 
@@ -17,6 +15,16 @@ config ZMK_KEYBOARD_NAME
     default "FrostOrtho_L"
 
 config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_FROSTORTHO_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "frostortho_dongle"
+
+config ZMK_KSCAN
     default y
 
 endif
