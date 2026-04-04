@@ -1,8 +1,8 @@
+#include "FrostOrtho.dtsi"
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,matrix_transform = &default_transform;
-        zmk,physical_layout = &physical_layout0; // これが必要な場合があります
     };
 
     // ドングル本体には物理ボタンがないので「空の入力」を定義
