@@ -5,8 +5,7 @@
         zmk,kscan = &mock_kscan;
     };
 
-    // ドングル本体には物理ボタンがないので「空の入力」を定義
-    mock_kscan: kscan_1 {
+    mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
