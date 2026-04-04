@@ -1,5 +1,3 @@
-#include "FrostOrtho.dtsi"
-
 / {
     chosen {
         zmk,kscan = &mock_kscan;
