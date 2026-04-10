@@ -14,7 +14,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     #  - name: prospector
     #    url-base: https://github.com/t-ogura
-    - name: carrefinho                            # <--- add this
+    - name: carrefinho
       url-base: https://github.com/carrefinho
 
   projects:
@@ -54,8 +54,8 @@ manifest:
     #    remote: prospector
     #    revision: v2.0.0  # Use v2.0.0 for ZMK ≤0.3 (Zephyr 3.x)
     #    path: modules/prospector-zmk-module
-    - name: prospector-zmk-module                 
-      remote: carrefinho                  
+    - name: prospector-zmk-module
+      remote: carrefinho
       revision: main
       path: modules/prospector-zmk-module
 
