@@ -15,3 +15,7 @@
 &left_encoder {
     status = "okay";
 };
+
+&trackball_split {
+    status = "disabled";
+};

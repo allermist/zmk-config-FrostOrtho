@@ -134,4 +134,12 @@
     };
 };
 
+&trackball_split {
+    device = <&trackball>;
+    status = "okay";
 
+};
+
+&trackball_listener {
+    status = "okay";
+};

@@ -1,14 +1,26 @@
 #include "FrostOrtho.dtsi"
 
+&kscan0 {
+	status = "disabled";
+};
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
     };
 
-    mock_kscan: kscan_0 {
+    mock_kscan: kscan_1 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;
         events = <0>;
     };
+};
+
+&physical_layout0 {
+    kscan = <&mock_kscan>;
+};
+
+&trackball_listener {
+    status = "okay";
 };
