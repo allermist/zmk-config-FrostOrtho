@@ -48,8 +48,6 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
-        // input-processors = <&mouse_runtime_input_processor>;
         input-processors = <
             &mouse_runtime_input_processor
             &zip_temp_layer 6 100000 // AMLレイヤー、タイムアウト時間
