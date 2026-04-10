@@ -50,13 +50,8 @@
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP) // カーソルの移動方向調整
         &zip_xy_scaler 4 6 // カーソル移動量4/6倍
+        &zip_temp_layer 6 10000
     >;
-
-    auto-mouse-layer {
-        layers = <MOUSE>;
-        input-processors = <&zip_temp_layer 6 10000>;
-        process-next;
-    };
 
     scroller_y {
         layers = <5>; // 縦スクロールレイヤー
@@ -147,7 +142,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "FrostOrtho";
+            display-name = "FrostO";
             bindings = <
 &kp Q                 &kp W         &kp E         &kp R             &kp T                         &kp Y        &kp U          &lt 5 I    &kp O         &kp P
 &kp A                 &kp S         &kp D         &kp F             &kp G                         &kp H        &kp J          &kp K      &kp L         &kp MINUS
