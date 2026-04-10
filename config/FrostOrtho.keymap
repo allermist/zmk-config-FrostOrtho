@@ -147,6 +147,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "FrostOrtho";
             bindings = <
 &kp Q                 &kp W         &kp E         &kp R             &kp T                         &kp Y        &kp U          &lt 5 I    &kp O         &kp P
 &kp A                 &kp S         &kp D         &kp F             &kp G                         &kp H        &kp J          &kp K      &kp L         &kp MINUS
@@ -213,6 +214,7 @@
         };
 
         MOUSE {
+            display-name = "MOUSE";
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
