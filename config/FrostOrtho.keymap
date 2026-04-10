@@ -1,5 +1,4 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 750
-#define MOUSE 6
 
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
@@ -7,7 +6,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+
+#define MOUSE 6
 
 // AMLから離脱しないキー
 &zip_temp_layer {
@@ -43,24 +45,22 @@
     };
 };
 
-/ {
-    trackball_listener: trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <
-            &zip_temp_layer 6 100000 // AMLレイヤー、タイムアウト時間
-            &zip_xy_scaler 4 6 // カーソル移動量4/6倍
-            &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP) // カーソルの移動方向調整
-        >;
-    };
-};
-
 &trackball_listener {
+    compatible = "zmk,input-listener";
+    input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP) // カーソルの移動方向調整
+        &zip_xy_scaler 4 6 // カーソル移動量4/6倍
+    >;
+
+    auto-mouse-layer {
+        layers = <6>;
+        input-processors = <&zip_temp_layer MOUSE 10000>;
+        process-next;
+    };
+
     scroller_y {
         layers = <5>; // 縦スクロールレイヤー
         input-processors = <
-            // &scroll_runtime_input_processor
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT) // スクロール方向調整
             &zip_xy_to_scroll_mapper
             &zip_scroll_x_scaler 0 3 // X軸スクロール量0/3倍
@@ -136,16 +136,6 @@
             #sensor-binding-cells = <0>;
             tap-ms = <5>;
             bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
-        };
-
-        // DYA Studio用
-
-        rsr_vol: rsr_vol {
-            compatible = "zmk,behavior-runtime-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            tap-ms = <5>;
-            cw-binding = <&kp C_VOL_DN>;
-            ccw-binding = <&kp C_VOL_UP>;
         };
     };
 
