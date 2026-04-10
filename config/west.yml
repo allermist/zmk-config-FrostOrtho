@@ -18,13 +18,13 @@ manifest:
       url-base: https://github.com/carrefinho
 
   projects:
-    #　- name: zmk
-    #   remote: zmkfirmware
-    #   revision: v0.3.0
     - name: zmk
-      remote: cormoran
-      revision: v0.3-branch+dya
-      import: app/west.yml
+      remote: zmkfirmware
+      revision: v0.3.0
+    - name: zmk
+    #     remote: cormoran
+    #    revision: v0.3-branch+dya
+    #     import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: zmk-0.3
@@ -35,21 +35,21 @@ manifest:
       remote: caksoylar
       revision: v0.3.0
     # DYA Studio モジュール
-    - name: zmk-module-ble-management
-      remote: cormoran
-      revision: main
-    - name: zmk-module-battery-history
-      remote: cormoran
-      revision: main
-    - name: zmk-module-settings-rpc
-      remote: cormoran
-      revision: main
-    - name: zmk-module-runtime-input-processor
-      remote: cormoran
-      revision: main
-    - name: zmk-behavior-runtime-sensor-rotate
-      remote: cormoran
-      revision: main
+    #   - name: zmk-module-ble-management
+    #     remote: cormoran
+    #     revision: main
+    #   - name: zmk-module-battery-history
+    #     remote: cormoran
+    #     revision: main
+    #   - name: zmk-module-settings-rpc
+    #     remote: cormoran
+    #     revision: main
+    #   - name: zmk-module-runtime-input-processor
+    #     remote: cormoran
+    #     revision: main
+    #   - name: zmk-behavior-runtime-sensor-rotate
+    #     remote: cormoran
+    #     revision: main
     #  - name: prospector-zmk-module
     #    remote: prospector
     #    revision: v2.0.0  # Use v2.0.0 for ZMK ≤0.3 (Zephyr 3.x)
