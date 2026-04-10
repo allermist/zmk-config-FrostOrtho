@@ -54,7 +54,7 @@
 
     auto-mouse-layer {
         layers = <6>;
-        input-processors = <&zip_temp_layer MOUSE 10000>;
+        input-processors = <&zip_temp_layer 6 10000>;
         process-next;
     };
 
@@ -143,6 +143,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            label = "FrostOrtho";
             bindings = <
 &kp Q                 &kp W         &kp E         &kp R             &kp T                         &kp Y        &kp U          &lt 5 I    &kp O         &kp P
 &kp A                 &kp S         &kp D         &kp F             &kp G                         &kp H        &kp J          &kp K      &kp L         &kp MINUS
