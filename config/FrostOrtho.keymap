@@ -142,7 +142,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "FrostO";
+            display-name = "FrostOrtho";
             bindings = <
 &kp Q                 &kp W         &kp E         &kp R             &kp T                         &kp Y        &kp U          &lt 5 I    &kp O         &kp P
 &kp A                 &kp S         &kp D         &kp F             &kp G                         &kp H        &kp J          &kp K      &kp L         &kp MINUS
@@ -154,6 +154,7 @@
         };
 
         layer_1 {
+            display-name = "functions";
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
 &trans  &trans  &trans  &trans  &trans              &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
@@ -165,6 +166,7 @@
         };
 
         layer_2 {
+            display-name = "num";
             bindings = <
 &kp SLASH                   &kp N7     &kp N8  &kp N9  &kp LS(ASTERISK)              &kp AMPERSAND    &kp ASTERISK  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE
 &kp MINUS                   &kp N4     &kp N5  &kp N6  &kp PLUS                      &kp DOLLAR       &kp PERCENT   &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
@@ -176,6 +178,7 @@
         };
 
         layer_3 {
+            display-name = "arrow";
             bindings = <
 &kp ESCAPE      &trans          &kp UP_ARROW    &trans           &trans               &trans  &trans  &trans  &trans  &trans
 &kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END              &trans  &trans  &trans  &trans  &trans
@@ -187,6 +190,7 @@
         };
 
         layer_4 {
+            display-name = "Bluetooth";
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans              &trans          &trans        &trans        &trans        &trans
@@ -198,6 +202,7 @@
         };
 
         layer_5 {
+            display-name = "scroll";
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
@@ -221,6 +226,7 @@
         };
 
         layer_7 {
+            display-name = "macro";
             bindings = <
 &kp LC(Z)  &kp LC(Y)    &trans       &trans       &trans              &trans  &trans  &trans  &trans  &trans
 &trans     &trans       &trans       &trans       &trans              &trans  &trans  &trans  &trans  &trans
